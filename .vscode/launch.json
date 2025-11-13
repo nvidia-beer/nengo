@@ -1,0 +1,184 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "01 - Basic Ensemble",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "/usr/local/bin/nengo",
+            "args": [
+                "01_basic_ensemble.py",
+                "-P", "8081",
+                "-l", "*",
+                "--unsecure",
+                "-p", "nengo",
+                "--no-browser"
+            ],
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "name": "02 - Ensemble with Radius",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "/usr/local/bin/nengo",
+            "args": [
+                "02_ensemble_with_radius.py",
+                "-P", "8081",
+                "-l", "*",
+                "--unsecure",
+                "-p", "nengo",
+                "--no-browser"
+            ],
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "name": "03 - Two Dimensional",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "/usr/local/bin/nengo",
+            "args": [
+                "03_two_dimensional.py",
+                "-P", "8081",
+                "-l", "*",
+                "--unsecure",
+                "-p", "nengo",
+                "--no-browser"
+            ],
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "name": "04 - Computing Square",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "/usr/local/bin/nengo",
+            "args": [
+                "04_computing_square.py",
+                "-P", "8081",
+                "-l", "*",
+                "--unsecure",
+                "-p", "nengo",
+                "--no-browser"
+            ],
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "name": "05 - Multiplication",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "/usr/local/bin/nengo",
+            "args": [
+                "05_multiplication.py",
+                "-P", "8081",
+                "-l", "*",
+                "--unsecure",
+                "-p", "nengo",
+                "--no-browser"
+            ],
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "name": "06 - Sine Wave",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "/usr/local/bin/nengo",
+            "args": [
+                "06_sine_wave.py",
+                "-P", "8081",
+                "-l", "*",
+                "--unsecure",
+                "-p", "nengo",
+                "--no-browser"
+            ],
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "name": "07 - Communication Channel",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "/usr/local/bin/nengo",
+            "args": [
+                "07_communication_channel.py",
+                "-P", "8081",
+                "-l", "*",
+                "--unsecure",
+                "-p", "nengo",
+                "--no-browser"
+            ],
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "name": "08 - Addition",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "/usr/local/bin/nengo",
+            "args": [
+                "08_addition.py",
+                "-P", "8081",
+                "-l", "*",
+                "--unsecure",
+                "-p", "nengo",
+                "--no-browser"
+            ],
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "name": "09 - Subtraction",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "/usr/local/bin/nengo",
+            "args": [
+                "09_subtraction.py",
+                "-P", "8081",
+                "-l", "*",
+                "--unsecure",
+                "-p", "nengo",
+                "--no-browser"
+            ],
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "name": "Nengo GUI - Current File",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "/usr/local/bin/nengo",
+            "args": [
+                "${file}",
+                "-P", "8081",
+                "-l", "*",
+                "--unsecure",
+                "-p", "nengo",
+                "--no-browser"
+            ],
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "name": "10 - 2D with Magnitude",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "/usr/local/bin/nengo",
+            "args": [
+                "10_ten_dimensional.py",
+                "-P", "8081",
+                "-l", "*",
+                "--unsecure",
+                "-p", "nengo",
+                "--no-browser"
+            ],
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}"
+        },
+    ]
+}

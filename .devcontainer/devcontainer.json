@@ -1,0 +1,41 @@
+{
+	"name": "Nengo with PyTorch",
+	"containerUser": "root",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+	"containerEnv": {
+		"PATH": "/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
+	},
+	"runArgs": [
+		"--gpus", "all",
+		"--shm-size=16g",
+		"--network=host",
+		"--ipc=host",
+		"--ulimit", "memlock=-1",
+		"--ulimit", "stack=67108864"
+	],
+	"initializeCommand": "ls",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-python.python",
+				"ms-python.vscode-pylance"
+			],
+			"settings": {
+				"python.defaultInterpreterPath": "/usr/bin/python3"
+			}
+		}
+	},
+
+	"forwardPorts": [8080],
+	"portsAttributes": {
+		"8080": {
+			"label": "Nengo GUI",
+			"onAutoForward": "notify"
+		}
+	}
+}
+
+
+
