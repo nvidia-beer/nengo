@@ -1,5 +1,21 @@
 import nengo
 import numpy as np
+# Instructions:
+# 1. Run this file in Nengo GUI
+# 2. Right-click on `spring_strength` node and select "slider" (range 0.1 to 5.0)
+# 3. Right-click on `state` node and select "value" to see actual dynamics
+# 4. Right-click on `prediction` node to see what the SNN learns
+# 5. Right-click on `error` node to see learning error (should decrease over time)
+# 6. For a trajectory plot, right-click on `state` and select "XY-value"
+#    - X axis: dimension 0 (x_pos)
+#    - Y axis: dimension 2 (y_pos)
+# 7. Press play and watch the ensemble LEARN the spring dynamics via PES!
+#    - The prediction should converge to match the actual state
+#    - Adjust spring_strength slider to see if it can adapt to changes
+# 
+# The state represents: [x_position, x_velocity, y_position, y_velocity]
+# Initial conditions: x=1.0, vx=0.0, y=-1.0, vy=0.5
+# Learning: PES rule with learning_rate=1e-4
 
 # Spring parameters
 m = 1.0  # Mass
@@ -77,20 +93,4 @@ with model:
     prediction_probe = nengo.Probe(prediction, synapse=0.01)
     error_probe = nengo.Probe(error, synapse=0.01)
 
-# Instructions:
-# 1. Run this file in Nengo GUI
-# 2. Right-click on `spring_strength` node and select "slider" (range 0.1 to 5.0)
-# 3. Right-click on `state` node and select "value" to see actual dynamics
-# 4. Right-click on `prediction` node to see what the SNN learns
-# 5. Right-click on `error` node to see learning error (should decrease over time)
-# 6. For a trajectory plot, right-click on `state` and select "XY-value"
-#    - X axis: dimension 0 (x_pos)
-#    - Y axis: dimension 2 (y_pos)
-# 7. Press play and watch the ensemble LEARN the spring dynamics via PES!
-#    - The prediction should converge to match the actual state
-#    - Adjust spring_strength slider to see if it can adapt to changes
-# 
-# The state represents: [x_position, x_velocity, y_position, y_velocity]
-# Initial conditions: x=1.0, vx=0.0, y=-1.0, vy=0.5
-# Learning: PES rule with learning_rate=1e-4
 
